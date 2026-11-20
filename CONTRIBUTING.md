@@ -16,7 +16,8 @@
 
 ## Git
 
+- All changes go through a branch and a pull request, never directly to `main`.
 - One branch per step: `<type>/<topic>`, type `docs`, `feature`, `test` or `fix`, e.g. `feature/US-03-deposit`.
 - Commit message: `<IDs>: <imperative summary>`, e.g. `US-03, AC-03.2: Reject deposits of zero`. Code commits name at least one user story. Commits without an item use `chore:`.
-- Pull request title in commit format; the description lists the covered IDs. The other team member reviews before merging.
-- Pull requests are squash-merged, so each pull request is one commit on `main` carrying its IDs. The traceability matrix references commits by pull request number (`#12`), entered when the pull request is opened.
+- Pull request title in commit format; the description lists the covered IDs. The other team member looks it over before merging. No approval is technically required; if there is no reply after a few days, the author may merge.
+- Pull requests are squash-merged (the only allowed merge method) and the branch is deleted afterwards, so each pull request is one commit on `main` carrying its IDs. The traceability matrix references commits by pull request number (`#12`), entered when the pull request is opened.
